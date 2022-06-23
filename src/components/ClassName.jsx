@@ -18,7 +18,7 @@ const StyleWithClassName = () => {
         }}
       >
         <Grid item>
-          <Typography>Login</Typography>
+          <Typography>makeStyles</Typography>
         </Grid>
         <Grid item>
           <TextField variant="outlined"></TextField>

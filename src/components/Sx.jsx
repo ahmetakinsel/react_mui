@@ -19,10 +19,10 @@ const buttonStyles = {
   backgroundColor: "#00203F",
   marginTop: "20px",
   //Using pseudo selectors:
-  //   "&:hover": {
-  //     backgroundColor: " #ADEFD1",
-  //     color: "#00203F",
-  //   },
+  "&:hover": {
+    backgroundColor: "#ADEFD1",
+    color: "#00203F",
+  },
 };
 
 const TextFieldStyle = {
@@ -31,15 +31,16 @@ const TextFieldStyle = {
 
   //lines 32-36 and 88-91 choosing label element
   //Using pseudo selectors:
-  //"& label": { color: "#fff", fontSize: "16px" },
-  //   "& .MuiInputLabel-root": {
-  //     color: "#00203F",
-  //   },
+  "& label": { color: "#fff", fontSize: "16px" },
 
-  //   "& .MuiOutlinedInput-notchedOutline": {
-  //     borderColor: "#00203F",
-  //     border: 2,
-  //   },
+  "& .MuiInputLabel-root": {
+    color: "#00203F",
+  },
+
+  "& .MuiOutlinedInput-notchedOutline": {
+    borderColor: "#00203F",
+    border: 2,
+  },
 
   /* 
    "& .MuiInputLabel-outlined.Mui-focused": {
@@ -57,8 +58,12 @@ const StyleWithSxProp = () => {
         direction="column"
         alignItems="center"
         style={{
-          width: "400px",
-          height: "600px",
+          display: "flex",
+          justifyContent: "center",
+          flexDirection: "column",
+          width: "375px",
+          height: "667px",
+          backgroundColor: "#ADEFD1",
         }}
       >
         <Grid item>
@@ -66,7 +71,7 @@ const StyleWithSxProp = () => {
             // As part of the prop, you can use any regular CSS too: child or pseudo-selectors,
             // media queries, raw CSS values, etc.
             sx={{
-              color: "#ADEFD1",
+              color: "#00203F",
               fontFamily: "Montserrat",
               fontWeight: "500",
               fontSize: "42px",
@@ -74,7 +79,7 @@ const StyleWithSxProp = () => {
               lineHeight: "44px",
             }}
           >
-            Login X
+            The Sx Prop
           </Typography>
         </Grid>
         <Grid item>
