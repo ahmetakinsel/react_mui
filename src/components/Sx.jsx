@@ -13,12 +13,16 @@ const StyleWithSxProp = () => {
         direction="column"
         alignItems="center"
         style={{
-          width: "400px",
-          height: "600px",
+          display: "flex",
+          justifyContent: "center",
+          flexDirection: "column",
+          width: "375px",
+          height: "667px",
+          backgroundColor: "#ADEFD1",
         }}
       >
         <Grid item>
-          <Typography>Login X</Typography>
+          <Typography>The Sx Prop</Typography>
         </Grid>
         <Grid item>
           <TextField variant="outlined"></TextField>

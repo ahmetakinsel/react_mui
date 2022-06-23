@@ -9,6 +9,7 @@ function App() {
         justifyContent: "center",
         alignItems: "center",
         height: "100vh",
+        gap: "80px",
       }}
     >
       <StyleWithSxProp />

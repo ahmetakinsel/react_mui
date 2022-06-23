@@ -1,7 +1,6 @@
 import React from "react";
 import { Button, TextField, Grid, Typography } from "@mui/material";
 
-//Switch to nightmode
 //Colors: #00203F, #ADEFD1,#FFFFFF
 
 const StyleWithClassName = () => {
@@ -13,12 +12,16 @@ const StyleWithClassName = () => {
         direction="column"
         alignItems="center"
         style={{
-          width: "400px",
-          height: "600px",
+          display: "flex",
+          justifyContent: "center",
+          flexDirection: "column",
+          width: "375px",
+          height: "667px",
+          backgroundColor: "#00203F",
         }}
       >
         <Grid item>
-          <Typography>Login</Typography>
+          <Typography>makeStyles</Typography>
         </Grid>
         <Grid item>
           <TextField variant="outlined"></TextField>
