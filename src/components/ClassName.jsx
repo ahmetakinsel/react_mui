@@ -13,8 +13,12 @@ const StyleWithClassName = () => {
         direction="column"
         alignItems="center"
         style={{
-          width: "400px",
-          height: "600px",
+          display: "flex",
+          justifyContent: "center",
+          flexDirection: "column",
+          width: "375px",
+          height: "667px",
+          backgroundColor: "#00203F",
         }}
       >
         <Grid item>
