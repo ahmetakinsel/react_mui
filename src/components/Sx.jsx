@@ -13,7 +13,7 @@ const StyleWithSxProp = () => {
         direction="column"
         alignItems="center"
         style={{
-          display: "flex",
+          display: "none",
           justifyContent: "center",
           flexDirection: "column",
           width: "375px",
