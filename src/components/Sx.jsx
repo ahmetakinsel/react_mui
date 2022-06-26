@@ -68,7 +68,7 @@ const TextFieldStyle = {
   },
 
   //focused text color
-  "& .MuiInputLabel-outlined.Mui-focused": {
+  "& .MuiInputLabel-outlined .Mui-focused": {
     color: "#00203F",
   },
 };
