@@ -4,8 +4,15 @@ import { Button, TextField, Grid, Typography } from "@mui/material";
 
 //Colors: #00203F, #ADEFD1,#FFFFFF
 
-// olan satırlar phase 2
-// /*  */ arasında olan satırlar phase 3
+/*
+
+Tasks: 
+
+Button styling
+Focus and hover state of the label element
+The input border, border focused and hover states.
+
+*/
 
 const buttonStyles = {
   color: "#FFFFFF",
@@ -29,25 +36,41 @@ const TextFieldStyle = {
   width: "275px",
   height: "50px",
 
-  //lines 32-36 and 88-91 choosing label element
-  //Using pseudo selectors:
-  "& label": { color: "#fff", fontSize: "16px" },
+  //INPUT
+  //default text
+  "& .MuiOutlinedInput-root": {
+    //color: "#00203F",
+    color: "yellow",
 
-  "& .MuiInputLabel-root": {
-    color: "#00203F",
+    // (focused)
+    "&.Mui-focused fieldset": {
+      // borderColor: "#00203F",
+      borderColor: "red",
+    },
   },
-
+  //default border (!focused)
+  //!root
   "& .MuiOutlinedInput-notchedOutline": {
-    borderColor: "#00203F",
+    color: "green",
     border: 2,
   },
+  //hover
+  "&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
+    borderColor: "#fff",
+  },
 
-  /* 
-   "& .MuiInputLabel-outlined.Mui-focused": {
+  //LABEL
+
+  //text color
+  "& .MuiInputLabel-root": {
+    color: "#00203F",
+    fontSize: "14px",
+  },
+
+  //focused text color
+  "& .MuiInputLabel-outlined.Mui-focused": {
     color: "#00203F",
   },
-  
-  */
 };
 const StyleWithSxProp = () => {
   return (
@@ -92,25 +115,39 @@ const StyleWithSxProp = () => {
               color: "#fff",
               //Using nested selector:
               "& .MuiOutlinedInput-root": {
-                color: "#00203F",
-                //default text
-              },
-              //   "& .MuiOutlinedInput-notchedOutline": {
-              //     border: 2,
-              //     borderColor: "#00203F",
-              //   },
-              //   "& label": { color: "#fff", fontSize: "16px" },
-              //   "& .MuiInputLabel-root": {
-              //     color: "#c01a1a",
-              //   },
+                //color: "#00203F",
+                color: "yellow",
 
-              /* 
-
-              "& .MuiInputLabel-outlined.Mui-focused": {
-                    color: "#c01a1a",
+                // (focused)
+                "&.Mui-focused fieldset": {
+                  // borderColor: "#00203F",
+                  borderColor: "red",
                 },
-            
-               */
+              },
+              //default border (!focused)
+              //!root
+              "& .MuiOutlinedInput-notchedOutline": {
+                color: "green",
+                border: 2,
+              },
+              //hover
+              "&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline":
+                {
+                  borderColor: "#fff",
+                },
+
+              //LABEL
+
+              //text color
+              "& .MuiInputLabel-root": {
+                color: "#00203F",
+                fontSize: "14px",
+              },
+
+              //focused text color
+              "& .MuiInputLabel-outlined.Mui-focused": {
+                color: "#00203F",
+              },
             }}
           />
         </Grid>
