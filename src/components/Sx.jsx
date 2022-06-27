@@ -1,6 +1,6 @@
 import React from "react";
-//import Button from "@mui/material/Button";
 import { Button, TextField, Grid, Typography } from "@mui/material";
+import { makeStyles } from "@mui/styles";
 
 //Colors: #00203F, #ADEFD1,#FFFFFF
 
@@ -51,8 +51,7 @@ const TextFieldStyle = {
   //default border (!focused)
   //!root
   "& .MuiOutlinedInput-notchedOutline": {
-    color: "green",
-    border: 2,
+    color: "red",
   },
   //hover
   "&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
@@ -72,7 +71,50 @@ const TextFieldStyle = {
     color: "#00203F",
   },
 };
-const StyleWithSxProp = () => {
+
+const useStyles = makeStyles({
+  textField: {
+    width: "275px",
+    height: "50px",
+    fontFamily: "Montserrat",
+    letterSpacing: "-0.2px",
+
+    "& .MuiOutlinedInput-root": {
+      //clicked (focused) state
+      color: "yellow",
+      "&.Mui-focused fieldset": {
+        borderColor: "red",
+      },
+    },
+    //default border
+    "& .MuiOutlinedInput-notchedOutline": {
+      borderColor: "green",
+    },
+
+    //label
+    "& .MuiInputLabel-root": {
+      color: "#00203F",
+      fontSize: "14px",
+    },
+    //hover
+    "&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
+      borderColor: "#fff",
+    },
+    //label focused
+    "& .MuiInputLabel-outlined .Mui-focused": {
+      color: "#00203F",
+    },
+  },
+
+  header: {
+    textTransform: "uppercase",
+    fontWeight: "400",
+    fontFamily: "Montserrat",
+  },
+});
+
+const StylingOptions = () => {
+  const classes = useStyles();
   return (
     <>
       <Grid
@@ -80,6 +122,7 @@ const StyleWithSxProp = () => {
         spacing={3}
         direction="column"
         alignItems="center"
+        className={classes.header}
         style={{
           display: "flex",
           justifyContent: "center",
@@ -102,52 +145,18 @@ const StyleWithSxProp = () => {
               lineHeight: "44px",
             }}
           >
-            The Sx Prop
+            MUI Styling
           </Typography>
         </Grid>
         <Grid item>
           <TextField
             variant="outlined"
             label="CSS"
+            className={classes.textField}
             sx={{
               width: "275px",
               height: "50px",
               color: "#fff",
-              //Using nested selector:
-              "& .MuiOutlinedInput-root": {
-                //color: "#00203F",
-                color: "yellow",
-
-                // (focused)
-                "&.Mui-focused fieldset": {
-                  // borderColor: "#00203F",
-                  borderColor: "red",
-                },
-              },
-              //default border (!focused)
-              //!root
-              "& .MuiOutlinedInput-notchedOutline": {
-                color: "green",
-                border: 2,
-              },
-              //hover
-              "&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline":
-                {
-                  borderColor: "#fff",
-                },
-
-              //LABEL
-
-              //text color
-              "& .MuiInputLabel-root": {
-                color: "#00203F",
-                fontSize: "14px",
-              },
-
-              //focused text color
-              "& .MuiInputLabel-outlined.Mui-focused": {
-                color: "#00203F",
-              },
             }}
           />
         </Grid>
@@ -155,7 +164,12 @@ const StyleWithSxProp = () => {
           <TextField
             label="Spread"
             variant="outlined"
-            sx={{ ...TextFieldStyle }}
+            sx={{
+              ...TextFieldStyle,
+              "& .MuiOutlinedInput-notchedOutline": {
+                borderColor: "green",
+              },
+            }}
           />
         </Grid>
         <Grid item>
@@ -168,4 +182,4 @@ const StyleWithSxProp = () => {
   );
 };
 
-export default StyleWithSxProp;
+export default StylingOptions;

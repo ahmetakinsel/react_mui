@@ -1,5 +1,4 @@
-import StyleWithSxProp from "./components/Sx";
-import StyleWithClassName from "./components/ClassName";
+import StylingOptions from "./components/Sx";
 
 function App() {
   return (
@@ -11,8 +10,7 @@ function App() {
         height: "100vh",
       }}
     >
-      <StyleWithSxProp />
-      <StyleWithClassName />
+      <StylingOptions />
     </div>
   );
 }
