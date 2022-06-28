@@ -53,6 +53,10 @@ const TextFieldStyle = {
   "& .MuiOutlinedInput-notchedOutline": {
     color: "red",
   },
+
+  //The notched outline is a border around all sides of either a Text Field or Select component.
+  // This is used for the Outlined variant of either a Text Field or Select.
+
   //hover
   "&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
     borderColor: "#fff",
