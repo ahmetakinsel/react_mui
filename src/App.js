@@ -1,4 +1,4 @@
-import StylingOptions from "./components/Sx";
+import Styling from "./components/Styling";
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
         height: "100vh",
       }}
     >
-      <StylingOptions />
+      <Styling />
     </div>
   );
 }
