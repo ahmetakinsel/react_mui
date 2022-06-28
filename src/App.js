@@ -1,5 +1,4 @@
-import StyleWithSxProp from "./components/Sx";
-import StyleWithClassName from "./components/ClassName";
+import Styling from "./components/Sx";
 
 function App() {
   return (
@@ -12,8 +11,7 @@ function App() {
         gap: "80px",
       }}
     >
-      <StyleWithSxProp />
-      <StyleWithClassName />
+      <Styling />
     </div>
   );
 }

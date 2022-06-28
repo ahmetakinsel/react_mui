@@ -4,7 +4,7 @@ import { Button, TextField, Grid, Typography } from "@mui/material";
 
 //Colors: #00203F, #ADEFD1,#FFFFFF
 
-const StyleWithSxProp = () => {
+const Styling = () => {
   return (
     <>
       <Grid
@@ -38,4 +38,4 @@ const StyleWithSxProp = () => {
   );
 };
 
-export default StyleWithSxProp;
+export default Styling;
