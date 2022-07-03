@@ -1,4 +1,4 @@
-import Styling from "./components/Sx";
+import Styling from "./components/Styling";
 
 function App() {
   return (
